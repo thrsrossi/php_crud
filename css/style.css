@@ -1,0 +1,471 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+
+
+.header {
+	height: 8em;
+	display: flex;
+	font-family: 'KoHo', sans-serif;
+	border-bottom: 2px solid #80ff80;
+}
+.header-links {
+	width: 13em;
+	height: 8em;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.logged-in {
+	width: 13em;
+	margin: .5em 1em .5em .5em;
+}
+.header-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	flex: 1;
+	justify-content: center;
+}
+.header-buttons a {
+	font-size: 1em;
+	display: inline-block;
+	padding: .5em;
+	text-decoration: none;
+	color: #99ff99;
+	background-color: white;
+	width: 12em;
+	margin-right: 1em;
+}
+.header-buttons a:hover {
+	cursor: pointer;
+	background-color: #99ff99;
+	color: black;
+}
+.page-title {
+	font-family: 'Baloo Bhaijaan', cursive;
+	color: #80ff80;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+}
+.page-title a {
+	color: #80ff80;
+	display: block;
+	text-decoration: none;
+}
+.page-title a:hover {
+	cursor: pointer;
+	color: black;
+}
+h1 {
+	font-size: 4em;
+}
+.content-reg {
+	display: flex;
+	justify-content: center;
+	width: 70%;
+}
+.register-form {
+	margin: 1em 0;
+	width: 85%;
+	font-family: 'Exo 2', sans-serif;
+}
+.login-form {
+	margin: 3em 0;
+	width: 80%;
+	font-family: 'Exo 2', sans-serif;
+}
+.register-form h2,
+.login-form h2 {
+	text-align: center;
+	margin: .5em;
+	font-size: 2em;
+}
+.register-form input,
+.login-form input {
+	width: 100%;
+	padding: .5em;
+	margin: .5em 0;
+}
+.register-form input[type=submit],
+.login-form input[type=submit] {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.5em;
+	background-color: #99ff99;
+	color: white;
+}
+.register-form input[type=submit]:hover,
+.login-form input[type=submit]:hover {
+	cursor: pointer;
+	background-color: black;
+	color: #99ff99;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	min-height: 75vh;
+	background-color: #e6ffe6;
+	position: relative;
+}
+.content,
+.row-content,
+.content-confirm {
+	width: 70%;
+}
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	font-family: 'Quicksand', sans-serif;
+}
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 11em;
+	width: 33.3%;
+	margin: 2em 0;
+}
+.product-price {
+	font-size: 2em;
+	margin: 10px 0 15px 0;
+	text-align: center;
+}
+.product-name {
+	font-size: 3em;
+	text-align: center;
+}
+.quantity {
+	text-align: center;
+	font-size: 1em;
+	margin-bottom: 10px;
+}
+.total-price {
+	text-align: center;
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+footer {
+	height: 4em;
+	background-color: black;
+   	bottom: 0;
+}
+.add-to-cart {
+	margin-left: 10px;
+	height: 3em;
+}
+.add-to-cart:hover,
+.hover:hover,
+.confirm-order:hover {
+	background-color: black;
+	color: white;
+	cursor: pointer;
+}
+.adding-to-cart {
+	display: flex;
+	justify-content: center;
+}
+.h2-cart {
+	font-size: 2em;
+	margin: 1em 0;
+	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px solid #80ff80;
+	padding-bottom: 10px;
+}
+.h2-cart,
+.total-sum,
+.total-sum-top,
+.confirm-order,
+.thank-you-h2,
+.register-form h2,
+.login-form h2 {
+	font-family: 'Quicksand', sans-serif;
+}
+form.display-row {
+	font-family: 'Exo 2', sans-serif;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	justify-content: space-between;
+}
+.row-container {
+	display: flex;
+	justify-content: center;
+	min-height: 88vh;
+	background-color: #e6ffe6;
+}
+.row-products {
+	display: flex;
+	flex-direction: column;
+}
+.prod-name,
+.prod-price,
+.prod-quantity,
+.prod-total-price {
+	margin: .5em .5em .5em 0;
+}
+.prod-name,
+.prod-total-price {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.row-confirm {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.col-text {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.col-text,
+.col-cart {
+	font-family: 'Exo 2', sans-serif;
+}
+.row-text {
+	font-size: .8em;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.col-cart {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.total-sum,
+.total-sum-top {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: right;
+}
+.total-sum-top {	
+	margin-top: 1em;
+}
+.cart {
+	font-size: 1.5em;
+	margin: 15px 0;
+}
+.user {
+	font-size: 1.5em;
+	margin: 5px 0;
+}
+.go-to-confirm {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 3em 0;
+}
+.confirm-order {
+	display: inline-block;
+	width: 80%;
+	height: 2.5em;
+	font-size: 25px;
+	background-color: #99ff99;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	padding: .8em;
+}
+.confrim-order a {
+	background-color: #99ff99;
+	color: white;
+}
+.confirm-order a:hover {
+	background-color: black;
+	color: #99ff99;
+}
+.thanks-content {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+}
+.thank-you-message-box {
+	width: 80%;
+	margin-top: 3em;
+	border: 2px solid #80ff80;
+	font-family: 'Exo 2', sans-serif;
+	height: 25em;
+}
+.thank-you-h2 {
+	font-size: 2em;
+	text-align: center;
+	margin: 1em 0 .5em 0;
+}
+.thank-you-text {
+	font-size: 1.2em;
+	padding: 15px;
+	text-align: center;
+}
+.contact-email {
+	font-size: .8em;
+	padding: 15px;
+}
+.registered-message {
+	font-family: 'Exo 2', sans-serif;
+	margin: 1em 0;
+}
+
+ 
+
+
+
+
+
+@media screen and (max-width: 688px) {
+	h1 {
+		font-size: 2.8em;
+	}
+	.content,
+	.row-content {
+		width: 95%;
+	}
+	.row {
+		width: 50%;
+		margin: 1em 0;
+	}
+	.prod-name,
+	.prod-quantity,
+	.prod-total-price {
+		margin: .5em 5px .5em 0;
+		font-size: .6em;
+	}
+	.prod-name,
+	.prod-total-price {
+		font-size: .8em;
+		font-weight: bold;
+	}
+	.confirm-order {
+		font-size: 12px;
+	}
+	.header-links {
+		width: 10em;
+	}
+	.product-price {
+		font-size: 1.2em;
+		margin: 10px 0 15px 0;
+		text-align: center;
+	}
+	.product-name {
+		font-size: 2em;
+		text-align: center;
+	}
+	.thank-you-message-box {
+		width: 95%;
+		margin-top: 2em;
+	}
+	.content-reg {
+		width: 90%;
+	}
+	.login-form,
+	.register-form {
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 1060px) {
+	.row-content {
+		width: 85%;
+	}
+
+
+}
+
+
+@media screen and (max-width: 870px) {
+	.prod-name,
+	.prod-quantity,
+	.prod-total-price {
+		margin: 1em 5px 1em 0;
+		font-size: .8em;
+	}
+	.prod-name,
+	.prod-total-price {
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.prod-price {
+		display: none;
+	}
+	.row-confirm {
+		flex-direction: column;
+	}
+	.col-text,
+	.col-cart {
+		width: 100%;
+	}
+	.col-cart {
+		margin-top: 2em;
+	}
+	.confirm-order {
+		font-size: 20px;
+	}
+	.thanks-content {
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
